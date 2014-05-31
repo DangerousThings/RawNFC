@@ -22,7 +22,7 @@ public class MainActivity extends ListActivity
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        final Class[] values = new Class[] {NfcAActivity.class, NfcBActivity.class, NfcFActivity.class, NfcVActivity.class};
+        final Class[] values = new Class[] {NfcAActivity.class, NfcBActivity.class, NfcFActivity.class, NfcVActivity.class, IsoDepActivity.class};
         Intent intent = new Intent(this, values[position]);
         startActivity(intent);
     }
