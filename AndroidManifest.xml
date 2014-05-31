@@ -19,5 +19,8 @@
         <activity android:name="NfcBActivity"
                   android:label="NFC-B">
         </activity>
+        <activity android:name="NfcFActivity"
+                  android:label="NFC-F">
+        </activity>
     </application>
 </manifest>
