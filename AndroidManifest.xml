@@ -25,5 +25,8 @@
         <activity android:name="NfcVActivity"
                   android:label="NFC-V">
         </activity>
+        <activity android:name="IsoDepActivity"
+                  android:label="ISO-DEP">
+        </activity>
     </application>
 </manifest>
