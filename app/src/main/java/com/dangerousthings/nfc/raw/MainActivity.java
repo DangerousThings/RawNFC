@@ -56,6 +56,9 @@ public class MainActivity extends Activity implements NfcAdapter.ReaderCallback 
         setContentView(R.layout.activity_main);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeAsUpIndicator(android.R.drawable.ic_menu_info_details);
+
         inputView = findViewById(R.id.input);
         outputView = findViewById(R.id.output);
         inputView.addTextChangedListener(new HexTextWatcher());
@@ -164,11 +167,15 @@ public class MainActivity extends Activity implements NfcAdapter.ReaderCallback 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == 1) {
+        if (item.getItemId() == android.R.id.home) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://dngr.us/rawnfc"));
+            startActivity(browserIntent);
+        } else if (item.getItemId() == 1) {
             selectedTechnology = null;
             showTechnologySelectionDialog();
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
