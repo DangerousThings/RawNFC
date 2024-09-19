@@ -28,6 +28,8 @@ android {
 
     defaultConfig {
         applicationId "com.dangerousthings.nfc.raw"
+        versionCode 2
+        versionName "2.0.0"
         minSdkVersion 21
         targetSdkVersion 34
     }
