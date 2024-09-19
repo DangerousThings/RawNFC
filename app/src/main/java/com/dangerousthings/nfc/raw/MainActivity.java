@@ -139,7 +139,7 @@ public class MainActivity extends Activity implements NfcAdapter.ReaderCallback 
             if (!trimmed.isEmpty()) {
                 byte[] commandBytes = hexStringToByteArray(trimmed);
                 byte[] response = transceive(tagTech, commandBytes);
-                appendOutputText(Hex.encodeHexString(response));
+                appendOutputText(Hex.encodeHexString(response, false));
             }
         }
     }
