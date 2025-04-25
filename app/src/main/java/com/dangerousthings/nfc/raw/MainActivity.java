@@ -8,6 +8,7 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.*;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -124,6 +125,7 @@ public class MainActivity extends Activity implements NfcAdapter.ReaderCallback 
 
         try {
             tagTech.connect();
+            SystemClock.sleep(250);
             processCommands(tagTech);
             tagTech.close();
         } catch (IOException e) {
